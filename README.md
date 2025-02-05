@@ -11,7 +11,7 @@
 
 
 ### try
-- CSS의 오류의 경우 ~.css가 정적인 파일이기 때문이기에, server.js에서 let http = require('http')로 http 모듈대신 express모듈로 대체하고 main.css파일을 public파일에 넣고 부르는 식으로 한다는데, 관련해서 개념이 부족하여 해당파트를 좀 더 공부하고 개념이 정리 후 다시 시도해볼 예정.
+- CSS의 오류의 경우 ~.css가 정적인 파일이기 때문이기에, server.js에서 let http = require('http')인 http 모듈대신 express모듈로 대체하고 main.css파일을 public파일에 넣고 부르는 식으로 한다는데, 관련해서 개념이 부족하여 해당파트를 좀 더 공부하고 개념이 정리 후 다시 시도해볼 예정.
   
 - orderlist.html의 404 오류는 index.js가 server.js를 부르고 server.js는 request를 받아 router.js로 pathname, handle, response, queryData.productId를 보내고 router.js는 서버로 부터 받은 pathname의 타입이 함수인지를 확인후 404 or requestHandler.js로 넘기니까 이쪽에서 문제가 있다는 걸 알수있었는데. 
   아니면 requestHandler.js의 handle['/orderlist'] = orderlist; 이 부분을 잘못했는지 const order_view = fs.readFileSync('./orderlist.html', 'utf-8'); 이게 문제인지. 각각의 실행내용과 순서에 대해 보충필요.
