@@ -1,0 +1,8 @@
+//database
+database/
+
+
+//npm install mysql --save
+node_modules/
+package-lock.json
+package.json
